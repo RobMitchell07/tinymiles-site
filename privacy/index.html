@@ -51,7 +51,7 @@
 
     <div class="header">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective Date: June 30, 2026 &nbsp;·&nbsp; Last Updated: June 30, 2026</p>
+      <p class="meta">Effective Date: June 30, 2026 &nbsp;·&nbsp; Last Updated: July 22, 2026</p>
     </div>
 
     <div class="card">
@@ -69,7 +69,9 @@
       <ul>
         <li>Email address (used for authentication)</li>
         <li>Display name (e.g., "Mom," "Dad," "Grandma") — shown to other caregivers on the same account</li>
+        <li>Caregiver relationship (e.g., Parent, Grandparent, Other) — used to label shared baby views</li>
         <li>Encrypted password (handled by Supabase Auth — we never see your plaintext password)</li>
+        <li>Subscription status (Basic or Premium) — used to enforce feature access and caregiver limits; see Section 5</li>
       </ul>
       <h3>Baby Profile Data</h3>
       <ul>
@@ -89,7 +91,7 @@
         <li>Location data</li>
         <li>Device identifiers or advertising IDs</li>
         <li>Biometric data</li>
-        <li>Payment or financial information</li>
+        <li>Payment card numbers or other financial account details — TinyMiles offers optional Premium subscriptions, but all payment is handled directly by Apple's App Store; we never receive or store your card details. See Section 5 for the limited subscription metadata we do receive.</li>
         <li>Cookies or tracking pixels</li>
       </ul>
 
@@ -104,9 +106,19 @@
       </ul>
       <p>We do <strong>not</strong> sell your data, share it with advertisers, or use it to train AI or machine learning models.</p>
 
-      <h2>5. Data Processor: Supabase</h2>
+      <h2>5. Data Processors and Third-Party Services</h2>
+      <p>We use a small number of service providers to operate the App. Each acts as a data processor on our behalf, only for the purposes described below — none of them may use your data for their own purposes, and we do not sell or share your data with them for advertising.</p>
+
+      <h3>Supabase (backend and database)</h3>
       <p>TinyMiles uses <strong>Supabase</strong> (Supabase, Inc.) as our backend and database infrastructure. All data is stored on Supabase-managed servers, encrypted at rest and in transit (TLS). Supabase does not use your data for its own purposes. Learn more at <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</p>
       <p>Your data is stored in the <strong>United States</strong> (Supabase's default AWS region).</p>
+
+      <h3>Resend (transactional email)</h3>
+      <p>TinyMiles uses <strong>Resend</strong> to send account-related emails — password resets and account-creation confirmations. Resend processes your email address solely to deliver these messages; it is not used for marketing or shared with any other party. Learn more at <a href="https://resend.com/legal/privacy-policy" target="_blank">resend.com/legal/privacy-policy</a>.</p>
+
+      <h3>RevenueCat and Apple (subscription management)</h3>
+      <p>If you choose to purchase TinyMiles Premium, subscription purchases are made through Apple's App Store and billed directly by Apple — <strong>we never receive or store your payment card details.</strong> We use <strong>RevenueCat</strong> to manage and verify subscription status (e.g., whether your account is Basic or Premium) across devices. RevenueCat receives a device/app-generated user ID and purchase/subscription event data (product purchased, renewal dates, entitlement status) — it does not receive your name, email, or any baby/tracking data. Learn more at <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>.</p>
+      <p>See Section 5 of our <a href="/terms">Terms of Service</a> for full subscription pricing, billing, and cancellation terms.</p>
 
       <h2>6. Data About Minors (COPPA Disclosure)</h2>
       <p>TinyMiles stores tracking data <strong>about minors</strong> (babies) on behalf of their adult caregivers. We comply with the Children's Online Privacy Protection Act (COPPA):</p>
@@ -140,12 +152,13 @@
         <li>TLS encryption for all data in transit</li>
         <li>Supabase Row Level Security (RLS) — each user can only access their own data</li>
         <li>Encrypted passwords — we never store plaintext passwords</li>
-        <li>No third-party analytics or advertising SDKs</li>
+        <li>No third-party analytics or advertising SDKs (Resend and RevenueCat, described in Section 5, are used only for email delivery and subscription management, not analytics or advertising)</li>
       </ul>
       <p>In the event of a data breach, we will notify affected users within <strong>72 hours</strong> of discovery.</p>
 
       <h2>12. Third-Party Services</h2>
-      <p>The current version of TinyMiles does not use any third-party analytics, advertising, or crash reporting services. This policy will be updated before any such services are added.</p>
+      <p>TinyMiles does not use any third-party analytics or advertising services. Our only third-party service providers are Supabase, Resend, and RevenueCat, described in Section 5 — none of them are used for analytics, advertising, or tracking.</p>
+      <p><strong>Future additions</strong> (this policy will be updated before any of these are added): crash reporting (e.g., Sentry), analytics (e.g., Mixpanel), and push notifications (require separate consent).</p>
 
       <h2>13. Changes to This Policy</h2>
       <p>If we make material changes, we will notify you via in-app notification and/or email at least <strong>14 days</strong> before changes take effect.</p>
